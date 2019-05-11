@@ -1,0 +1,14 @@
+{
+    "id": "percent-below-poverty",
+    "title": "Percent Below Poverty",
+    "geographies": {
+      "districts": null,
+      "counties": {},
+      "heatmap": null
+    },
+    "source": {
+      "title": "U.S. Census Bureau, American Community Survey",
+      "year": 2017,
+      "url": ""
+    }
+  }

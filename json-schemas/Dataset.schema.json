@@ -1,0 +1,36 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "./examples/Dataset.example.json",
+  "type": "object",
+  "title": "Dataset",
+  "required": ["id", "title", "geographies", "source"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "A unique, descriptive id of the data.",
+      "examples": ["percent-below-poverty"],
+      "uniqueItems": true
+    },
+    "title": {
+      "type": "string",
+      "description": "Presentable title",
+      "examples": ["Percent Below Poverty"]
+    },
+    "geographies": {
+      "type": "object",
+      "title": "Geography name or spatial style of data.",
+      "examples": ["districts", "counties", "heatmap"],
+      "patternProperties": {
+        ".": {
+            "description": "Data and supplementary information for the geography.",
+            "$ref": "./DataTable.schema.json"
+        }
+      }
+    },
+    "source": {
+        "description": "A bibliographic source.",
+        "$ref": "./Source.schema.json"
+    }
+  }
+}
