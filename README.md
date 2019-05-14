@@ -17,6 +17,11 @@ Import these packages to webscrape:
 - time: time delays
 - re: regular expressions
 
+## Census Data Processing
+Use ProcessCensusAnnotations.py in order to process imported Census formatted data in QGIS. Following the processing, fields will have correct types and will have aliases of the Census provided annotation.
+
+After processing, use SummarizeCensusDatasetToJSON.py in order to export the data as a JSON file with a standardized format tha prioritizes the grouping of data by field. The exported data includes for each field: annotation as name, raw data, summary statistics, and common class breaks (reference the file for a more detailed schema example).
+
 ## Steps to Automate
 1. Install Selenium: <either one>
     - pip install selenium
