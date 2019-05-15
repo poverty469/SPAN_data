@@ -1,0 +1,47 @@
+{
+    "definitions": {},
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "./examples/DataTable.example.json",
+    "type": "object",
+    "title": "DataTable",
+    "required": ["title", "stats", "classBreaks", "data"],
+    "properties": {
+      "stats": {
+        "description": "Set of summary statistics.",
+        "$ref": "./Stats.schema.json"
+      },
+      "title": {
+        "type": "string",
+        "description": "Presentable title",
+        "examples": ["Percent Below Poverty"]
+      },
+      "classBreaks": {
+        "type": "object",
+        "description": "Set of class break results from varying methods.",
+        "examples": ["quantile", "equalInterval", "jenks"],
+        "required": ["quantile"],
+        "properties": {
+          "quantile": {
+              "description": "Five class breaks with equal sized buckets",
+              "type": "array",
+              "items": {
+                  "type": "number"
+              },
+              "uniqueItems": true
+          }
+        }
+      },
+      "data": {
+          "type": "array",
+          "description": "The raw data.",
+          "items": {
+              "type": "number"
+          }
+      },
+      "note": {
+          "type": "string",
+          "description": "Optional notes pertaining to the data."
+      }
+    }
+  }
+  

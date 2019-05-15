@@ -23,7 +23,7 @@
       "examples": ["districts", "counties", "heatmap"],
       "patternProperties": {
         ".": {
-            "description": "Data and supplementary information for the geography.",
+            "description": "Data and supplementary data for the specific geography.",
             "$ref": "./DataTable.schema.json"
         }
       }
