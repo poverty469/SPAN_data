@@ -51,6 +51,7 @@
         53049
     ],
     "HC03_EST_VC01": {
+        "note": "This is a note that explains something funky about this data.",
         "title": "Test_Alias",
         "stats": {
             "COUNT": 49,
